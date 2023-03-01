@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="robot_description" textfile="$(find learner_bot)/src/urdf/model_1.urdf" />
+
+    <node name="Rviz" pkg="rviz" type="rviz" output="screen" args="$(find learner_bot)/src/config/simple.rviz"/>
+    
+    <node name="Rsp" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+     
+    <node name ="jsp" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" output="screen"/>
+
+</launch>
